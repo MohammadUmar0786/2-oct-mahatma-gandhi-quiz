@@ -100,8 +100,6 @@
         button.classList.add("correct");
         resultEl.textContent = "✅ Correct!";
         score++;
-        correctSound.currentTime = 0;
-        correctSound.play();
         showCelebration();
       } else {
         button.classList.add("wrong");
