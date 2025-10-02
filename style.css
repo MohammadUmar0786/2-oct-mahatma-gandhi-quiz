@@ -1,0 +1,88 @@
+ * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; background: #f4f4f4; color: #333; }
+
+    header {
+      background: linear-gradient(120deg, orange, white, green);
+      padding: 40px;
+      text-align: center;
+    }
+    header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+    header p { font-size: 1.2rem; }
+
+    .quiz-container {
+      max-width: 700px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      position: relative;
+      overflow: hidden;
+    }
+    .question { font-size: 1.3rem; margin-bottom: 20px; }
+    .options button {
+      display: block;
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      background: #eee;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .options button:hover { background: #ddd; }
+    .options button.correct { background: #4caf50; color: white; }
+    .options button.wrong { background: #e74c3c; color: white; }
+
+    .result, .score, .timer, .leaderboard-section {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 1.1rem;
+    }
+
+    .celebration {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      pointer-events: none;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      font-weight: bold;
+      color: #4caf50;
+      animation: pop 1s ease;
+    }
+
+    @keyframes pop {
+      0% { transform: scale(0.5); opacity: 0; }
+      50% { transform: scale(1.2); opacity: 1; }
+      100% { transform: scale(1); opacity: 0; }
+    }
+
+    .leaderboard-table {
+      margin: 20px auto;
+      border-collapse: collapse;
+      width: 90%;
+    }
+    .leaderboard-table th, .leaderboard-table td {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+    .leaderboard-table th {
+      background: #4caf50;
+      color: white;
+    }
+
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      padding: 15px;
+      background: #222;
+      color: #fff;
+    }
+    .flag { display: flex; height: 12px; margin-bottom: 8px; }
+    .stripe { flex: 1; }
+    .orange { background: orange; }
+    .white { background: white; }
+    .green { background: green; }
